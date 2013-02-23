@@ -6,6 +6,15 @@ if (!defined('MEDIAWIKI')) {
 	exit;
 }
 
+$wgExtensionCredits['specialpage'][] = array(
+	'path'           => __FILE__,
+	'name'           => 'MoeUpload',
+	'descriptionmsg' => 'moemoeQdec',
+	'author'         => array('zoglun','March'),
+	'url'            => 'http://wiki.moegirl.org/Mainpage',
+	'version'        => '1.0',
+);
+
 $dir = dirname(__FILE__).'/';
 $wgExtensionMessagesFiles['moemoeQ'] = $dir . 'MoeUpload.i18n.php';
 
