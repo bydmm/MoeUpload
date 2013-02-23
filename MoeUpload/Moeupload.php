@@ -10,6 +10,9 @@ EOT;
         exit( 1 );
 }
 
+$dir = dirname(__FILE__).'/';
+$wgExtensionMessagesFiles['moemoeQ'] = $dir . 'MoeUpload.i18n.php';
+
 $wgHooks['UploadFormInitDescriptor'][] = 'onUploadFormInitDescriptor';
 $wgHooks['UploadForm:BeforeProcessing'][] = 'BeforeProcessing';
 
@@ -49,7 +52,7 @@ function onUploadFormInitDescriptor( $descriptor ) {
 			'type' => 'text',
 			'section' => 'description',
 			'id' => 'wpNickName',
-			'label-message' => '人物名',
+			'label-message' => 'moemoeQNickName',
 			'size' => 60,
 			//'default' => $this->mNickName,
 		),
@@ -57,7 +60,7 @@ function onUploadFormInitDescriptor( $descriptor ) {
 			'type' => 'text',
 			'section' => 'description',
 			'id' => 'wpAuthor',
-			'label-message' => '作者',
+			'label-message' => 'moemoeQAuthor',
 			'size' => 60,
 			//'default' => $this->mAuthor,
 		),
@@ -65,7 +68,7 @@ function onUploadFormInitDescriptor( $descriptor ) {
 			'type' => 'text',
 			'section' => 'description',
 			'id' => 'wpSrcUrl',
-			'label-message' => '源地址',
+			'label-message' => 'moemoeQSrcUrl',
 			'size' => 60,
 			//'default' => $this->mSrcUrl,
 		)
