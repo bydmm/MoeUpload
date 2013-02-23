@@ -3,11 +3,7 @@
 //在上传界面增加三个字段
 
 if (!defined('MEDIAWIKI')) {
-        echo <<<EOT
-To install my extension, put the following line in LocalSettings.php:
-require_once( "\$IP/extensions/EditImage/EditImage.php" );
-EOT;
-        exit( 1 );
+	exit;
 }
 
 $dir = dirname(__FILE__).'/';
