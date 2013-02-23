@@ -1,8 +1,5 @@
 <?php
 
-/** Chinese Simplified 
- * @author 晒太阳的冰 （zoglun@gmail.com）
- */
 $messages = array();
 
 /** English */
