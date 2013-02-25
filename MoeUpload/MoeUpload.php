@@ -21,8 +21,7 @@ $wgHooks['UploadFormInitDescriptor'][] = 'onUploadFormInitDescriptor';
 $wgHooks['UploadForm:BeforeProcessing'][] = 'BeforeProcessing';
 
 function onUploadFormInitDescriptor( $descriptor ) { 
-	var_dump($descriptor);
-	$descriptor += array(
+	$descriptor = array(
 		'NickName' => array(
 			'type' => 'text',
 			'section' => 'description',
