@@ -15,11 +15,41 @@ $wgExtensionCredits['specialpage'][] = array(
 	'version'        => '1.0',
 );
 
-$dir = dirname(__FILE__).'/';
-$wgExtensionMessagesFiles['moemoeQ'] = $dir . 'MoeUpload.i18n.php';
+$wgExtensionMessagesFiles['moemoeQ'] = dirname(__FILE__).'/'. 'MoeUpload.i18n.php';
 
 $wgHooks['UploadFormInitDescriptor'][] = 'onUploadFormInitDescriptor';
 $wgHooks['UploadForm:BeforeProcessing'][] = 'BeforeProcessing';
+
+function onUploadFormInitDescriptor( $descriptor ) { 
+	var_dump($descriptor);
+	$descriptor += array(
+		'NickName' => array(
+			'type' => 'text',
+			'section' => 'description',
+			'id' => 'wpNickName',
+			'label-message' => 'moemoeQNickName',
+			'size' => 60,
+			//'default' => $this->mNickName,
+		),
+		'Author' => array(
+			'type' => 'text',
+			'section' => 'description',
+			'id' => 'wpAuthor',
+			'label-message' => 'moemoeQAuthor',
+			'size' => 60,
+			//'default' => $this->mAuthor,
+		),
+		'SrcUrl' => array(
+			'type' => 'text',
+			'section' => 'description',
+			'id' => 'wpSrcUrl',
+			'label-message' => 'moemoeQSrcUrl',
+			'size' => 60,
+			//'default' => $this->mSrcUrl,
+		)
+	);
+	return $descriptor;
+}
 
 function BeforeProcessing( $uploadFormObj ) {
 	if( $uploadFormObj->mRequest->getFileName( 'wpUploadFile' ) !== null ) {
@@ -49,37 +79,6 @@ function BeforeProcessing( $uploadFormObj ) {
 	}
 
 	return $uploadFormObj;
-}
-
-function onUploadFormInitDescriptor( $descriptor ) { 
-	$descriptor += array(
-		'NickName' => array(
-			'type' => 'text',
-			'section' => 'description',
-			'id' => 'wpNickName',
-			'label-message' => 'moemoeQNickName',
-			'size' => 60,
-			//'default' => $this->mNickName,
-		),
-		'Author' => array(
-			'type' => 'text',
-			'section' => 'description',
-			'id' => 'wpAuthor',
-			'label-message' => 'moemoeQAuthor',
-			'size' => 60,
-			//'default' => $this->mAuthor,
-		),
-		'SrcUrl' => array(
-			'type' => 'text',
-			'section' => 'description',
-			'id' => 'wpSrcUrl',
-			'label-message' => 'moemoeQSrcUrl',
-			'size' => 60,
-			//'default' => $this->mSrcUrl,
-		)
-	);
-
-	return $descriptor;
 }
 
 ?>
