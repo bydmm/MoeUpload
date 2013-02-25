@@ -20,7 +20,7 @@ $wgExtensionMessagesFiles['moemoeQ'] = dirname(__FILE__).'/'. 'MoeUpload.i18n.ph
 $wgHooks['UploadFormInitDescriptor'][] = 'onUploadFormInitDescriptor';
 $wgHooks['UploadForm:BeforeProcessing'][] = 'BeforeProcessing';
 
-function onUploadFormInitDescriptor( $descriptor ) { 
+function onUploadFormInitDescriptor( &$descriptor ) { 
 	$descriptor += array(
 		'NickName' => array(
 			'type' => 'text',
@@ -50,7 +50,7 @@ function onUploadFormInitDescriptor( $descriptor ) {
 	return true;
 }
 
-function BeforeProcessing( $uploadFormObj ) {
+function BeforeProcessing( &$uploadFormObj ) {
 	if( $uploadFormObj->mRequest->getFileName( 'wpUploadFile' ) !== null ) {
 		$uploadFormObj->mAuthor            = $uploadFormObj->mRequest->getText( 'wpAuthor' );
 	  $uploadFormObj->mSrcUrl            = $uploadFormObj->mRequest->getText( 'wpSrcUrl' );
