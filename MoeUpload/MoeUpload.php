@@ -21,7 +21,7 @@ $wgHooks['UploadFormInitDescriptor'][] = 'onUploadFormInitDescriptor';
 $wgHooks['UploadForm:BeforeProcessing'][] = 'BeforeProcessing';
 
 function onUploadFormInitDescriptor( $descriptor ) { 
-	$descriptor = array(
+	$descriptor += array(
 		'NickName' => array(
 			'type' => 'text',
 			'section' => 'description',
@@ -47,7 +47,7 @@ function onUploadFormInitDescriptor( $descriptor ) {
 			//'default' => $this->mSrcUrl,
 		)
 	);
-	return $descriptor;
+	return true;
 }
 
 function BeforeProcessing( $uploadFormObj ) {
