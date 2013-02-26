@@ -22,13 +22,13 @@ $wgHooks['UploadForm:BeforeProcessing'][] = 'BeforeProcessing';
 
 function onUploadFormInitDescriptor( &$descriptor ) { 
 	$descriptor += array(
-		'NickName' => array(
+		'CharName' => array(
 			'type' => 'text',
 			'section' => 'description',
-			'id' => 'wpNickName',
-			'label-message' => 'moemoeQNickName',
+			'id' => 'wpCharName',
+			'label-message' => 'moemoeQCharName',
 			'size' => 60,
-			//'default' => $this->mNickName,
+			//'default' => $this->mCharName,
 		),
 		'Author' => array(
 			'type' => 'text',
@@ -54,14 +54,14 @@ function BeforeProcessing( &$uploadFormObj ) {
 	if( $uploadFormObj->mRequest->getFileName( 'wpUploadFile' ) !== null ) {
 		$uploadFormObj->mAuthor            = $uploadFormObj->mRequest->getText( 'wpAuthor' );
 	  $uploadFormObj->mSrcUrl            = $uploadFormObj->mRequest->getText( 'wpSrcUrl' );
-	  $uploadFormObj->mNickName          = $uploadFormObj->mRequest->getText( 'wpNickName' );
+	  $uploadFormObj->mCharName          = $uploadFormObj->mRequest->getText( 'wpCharName' );
 	  foreach (explode(" ", $uploadFormObj->mAuthor) as $author) {
 	      if ($author != "") {
 	          $uploadFormObj->mComment .= "[[分类:作者:$author]]";
 	      }
 	  }
 
-	  foreach (explode(" ", $uploadFormObj->mNickName) as $catagory) {
+	  foreach (explode(" ", $uploadFormObj->mCharName) as $catagory) {
 	      if ($catagory != "") {
 	          $uploadFormObj->mComment .= "[[分类:$catagory]]";
 	      }
