@@ -2,20 +2,35 @@
 
 $messages = array();
 
-/** English */
+/* English */
 $messages['en'] = array(
-  'moemoeQNickName' => 'NickName',
+  'moemoeQCharName' => 'Character name',
   'moemoeQAuthor' => 'Author',
 	'moemoeQSrcUrl' => 'Origin URL',
-	'moemoeQdec' => ''
+	'moemoeQdec' => 'MoegirlPedia style uploadpage enhance.'
 );
 
-/** Chinese */
+/* Chinese */
 $messages['zh-hans'] = array(
-	'moemoeQNickName' => '人物名',
+	'moemoeQCharName' => '人物名',
   'moemoeQAuthor' => '作者',
 	'moemoeQSrcUrl' => '源地址',
-	'moemoeQdec' => '上传页面增强插件'
+	'moemoeQdec' => '萌娘百科式上傳頁面註釋增強插件'
 );
 
+$messages['zh-hant'] = array(
+	'moemoeQCharName' => '人物名',
+  'moemoeQAuthor' => '作者',
+	'moemoeQSrcUrl' => '源地址',
+	'moemoeQdec' => '萌娘百科式上傳頁面註釋增強插件'
+);
+
+/* Japanese */
+
+$messages['ja'] = array(
+	'moemoeQCharName' => '名前',
+  'moemoeQAuthor' => '絵師',
+	'moemoeQSrcUrl' => 'ソースアドレス',
+	'moemoeQdec' => '萌えっ娘百科形式アップロード強化する'
+);
 ?>
