@@ -15,10 +15,26 @@ $wgExtensionCredits['specialpage'][] = array(
 	'version'        => '1.0'
 );
 
+$wgResourceModules['ext.Modernizr.foo'] = array(
+    'scripts' => 'modules/modernizr-2.6.2.min.js',
+    'remoteExtPath' => 'Modernizr',
+    'position' => 'top'
+);
+
+
+
 $wgExtensionMessagesFiles['moemoeQ'] = dirname(__FILE__).'/'. 'MoeUpload.i18n.php';
 
 $wgHooks['UploadFormInitDescriptor'][] = 'onUploadFormInitDescriptor';
 $wgHooks['UploadForm:BeforeProcessing'][] = 'BeforeProcessing';
+$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
+
+function onBeforePageDisplay( &$out, &$skin ) {
+	global $wgScriptPath;
+	$path = "$wgScriptPath/extensions/MoeUpload/MoeUpload.js";
+	$out->addScriptFile( $path );
+	return true;
+}
 
 function onUploadFormInitDescriptor( &$descriptor ) { 
 	$descriptor += array(
