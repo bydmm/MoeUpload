@@ -12,7 +12,7 @@ $wgExtensionCredits['specialpage'][] = array(
 	'descriptionmsg' => 'moemoeQdec',
 	'author'         => array('zoglun','March'),
 	'url'            => 'http://wiki.moegirl.org/Mainpage',
-	'version'        => '1.0',
+	'version'        => '1.0'
 );
 
 $wgExtensionMessagesFiles['moemoeQ'] = dirname(__FILE__).'/'. 'MoeUpload.i18n.php';
@@ -26,7 +26,7 @@ function onUploadFormInitDescriptor( &$descriptor ) {
 			'type' => 'text',
 			'section' => 'description',
 			'id' => 'wpNickName',
-			'label-message' => 'moemoeQNickName',
+			'label-message' => 'moemoeQCharName',
 			'size' => 60,
 			//'default' => $this->mNickName,
 		),
