@@ -10,7 +10,7 @@ $wgExtensionCredits['specialpage'][] = array(
 	'path'           => __FILE__,
 	'name'           => 'MoeUpload',
 	'descriptionmsg' => 'moemoeQdec',
-	'author'         => array('zoglun','March'),
+	'author'         => array('[http://wiki.moegirl.org/ 萌娘百科的baskice]','March'),
 	'url'            => 'http://wiki.moegirl.org/Mainpage',
 	'version'        => '1.0'
 );
