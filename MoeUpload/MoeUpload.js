@@ -3,7 +3,7 @@ $( document ).ready( function() {
 		var self = this;
 		if($(this).find("#wpUploadDescription")){
 			var html = $(this).find('.mw-input').html();
-			html = '<a class="tooggle" href="##" >仅供高级用户及管理员使用</a>' + html;
+			html = '<a class="tooggle" href="##" >仅供管理使用</a>' + html;
 			$(this).find('.mw-input').html(html);
 			$(this).find('.mw-input #wpUploadDescription').hide();
 		}
