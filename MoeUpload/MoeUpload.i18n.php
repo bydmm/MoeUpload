@@ -19,10 +19,10 @@ $messages['zh-hant'] = array(
 
 /* English */
 $messages['en'] = array(
-	  'moemoeQCharName' => 'Character name',
-	  'moemoeQAuthor' => 'Author',
-	  'moemoeQSrcUrl' => 'Origin URL',
-	  'moemoeQdec' => 'MoegirlPedia style uploadpage enhance.'
+	'moemoeQCharName' => 'Character name',
+	'moemoeQAuthor' => 'Author',
+	'moemoeQSrcUrl' => 'Origin URL',
+	'moemoeQdec' => 'MoegirlPedia style uploadpage enhance.'
 );
 
 /* Japanese */
