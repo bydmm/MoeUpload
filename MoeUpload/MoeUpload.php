@@ -15,14 +15,6 @@ $wgExtensionCredits['specialpage'][] = array(
 	'version'        => '1.0'
 );
 
-$wgResourceModules['ext.Modernizr.foo'] = array(
-    'scripts' => 'modules/modernizr-2.6.2.min.js',
-    'remoteExtPath' => 'Modernizr',
-    'position' => 'top'
-);
-
-
-
 $wgExtensionMessagesFiles['moemoeQ'] = dirname(__FILE__).'/'. 'MoeUpload.i18n.php';
 
 $wgHooks['UploadFormInitDescriptor'][] = 'onUploadFormInitDescriptor';
