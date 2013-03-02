@@ -31,7 +31,7 @@ $("#mw-upload-form").submit(function(){
   }
   //三选一&符号
   t="";
-  (o=$("#wpNickName,#wpAuthor,#wpSrcUrl")).each(function(i,a){t+=$(a).val()});
+  (o=$("#wpCharName,#wpAuthor,#wpSrcUrl")).each(function(i,a){t+=$(a).val()});
   o.each(function(i,a){t+=$(a).val()});
   if(!t){
     o.eq(0).focus();
