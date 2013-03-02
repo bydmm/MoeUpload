@@ -11,8 +11,8 @@ $wgExtensionCredits['specialpage'][] = array(
 	'name'           => 'MoeUpload',
 	'descriptionmsg' => 'moemoeQdec',
 	'author'         => array('March','nybux.tsui','XpAhH','baskice',),
-	'url'            => 'http://wiki.moegirl.org/Mainpage',
-	'version'        => '1.0'
+	'url'            => 'https://github.com/bydmm/MoeUpload',
+	'version'        => '1.1'
 );
 
 $wgExtensionMessagesFiles['moemoeQ'] = dirname(__FILE__).'/'. 'MoeUpload.i18n.php';
