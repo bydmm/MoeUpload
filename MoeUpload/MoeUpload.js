@@ -12,16 +12,19 @@ $( document ).ready( function() {
 		$('#wpUploadDescription').slideToggle();
 	});
 	  /*url输入验证*/
-	  $('input#wpUploadFileURL').change(function(){   
+	  $('input#wpSrcUrl').change(function(){   
 	    var str=$(this).val();
 	    str=str.replace(/(^\s*)|(\s*$)/g, "");
 	    str=str.toLowerCase();
 	    if(str.match(/(\.jepg)|(\.gif)|(\.jpg)|(.ico)$/g)){
-	      $(this).after('<p class=\'upLoadFileUrlmsg error \'>请输入页面地址，而非图片链接<p>');      
+	      if( $('p#upLoadFileUrlmsg').length==0)
+	      {
+	        $(this).after('<p  id=\"upLoadFileUrlmsg\" class=\"error \">请输入页面地址，而非图片链接<p>');  
+	      }    
 	    }else{
-	      $('p.upLoadFileUrlmsg.error').remove();
+	      $('p#upLoadFileUrlmsg').remove();
 	    }
-	  });
+ 	 });
 } );
 
 /* XpAhH同学写的上传页面检测，未写注释禁止上传。管理员，巡查员不检测 */
@@ -58,7 +61,7 @@ $("#mw-upload-form").submit(function(){
     return!1;
   }
     /*url提交验证*/
-  if($('p.upLoadFileUrlmsg.error').length==0){
+  if($('p#upLoadFileUrlmsg').length==0){
     return true;
   }
   else{
